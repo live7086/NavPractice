@@ -13,6 +13,6 @@ fun text (navController: NavController) {
         modifier = Modifier
             .clickable { navController.navigate("first") }
     ) {
-        Text(text = "text page")
+        Text(text = "text page updated")
     }
 }
