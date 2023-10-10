@@ -3,6 +3,7 @@ package com.example.navpractice
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
@@ -15,9 +16,13 @@ import com.example.navpractice.Pages.WelcomePage
 
 
 class MainActivity : ComponentActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
+
             MyApp()
         }
     }
@@ -31,6 +36,7 @@ fun MyApp() {
         composable("second") { SecondPage(navController) }
         composable("text") { text(navController) }
         composable("welcome") { WelcomePage(navController) }
+        composable("Camera") {}
     }
 }
 
